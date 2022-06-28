@@ -1,0 +1,14 @@
+<div class="container pt-3 pb-3">
+    <div class="row">
+        <h3 class="ml-2 mt-5 pt-5">Kid's Wear </h3>
+        <ng-container *ngFor="let product of products">
+            <div class="card col-md-4 product_img mar_top">
+                <img src="../../assets/{{product.productImage}}" alt="" style="height: 300px;">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{product.productName}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{product.productDescription}}</p>
+                <p><strong>Price:</strong> ${{product.productFinal}}</p>
+                <button class="btn add_cart" (click)=addtocart(product)>Add to cart</button>
+            </div>
+        </ng-container>
+    </div>
+</div>
